@@ -28,8 +28,8 @@ body {
   line-height: 1.25;
   background-color: #181818;
   color: white;
+  font-family: "Josefin Sans", sans-serif;
 }
- @media{ (min-width:480px )and (max-width:780px)}
 a {
   color: inherit;
   font-family: "Josefin Sans", sans-serif;
@@ -46,7 +46,7 @@ video {
 .navigation {
   background-color: black;
 }
-
+/* 
 #menuToggle {
   display: block;
   position: relative;
@@ -141,16 +141,23 @@ video {
 
 #menuToggle input:checked ~ ul {
   transform: none;
-}
+} */
 
 .nav {
   margin-left: 260px;
   margin-bottom: auto;
 }
 
-.Logo {
+h1 {
+  text-align: center;
   width: 296.716px;
-  margin-left: 530px;
+}
+
+@media (max-width: 991px) {
+  h1 {
+    text-align: center;
+    width: 180px;
+  }
 }
 
 header {
@@ -161,45 +168,34 @@ header {
 }
 
 .text_welcome {
-  margin: -150px 160px 0;
+  margin: -150px 0 0;
   text-align: center;
   font-size: 38px;
   background: #9f9f9f;
-  padding: 30px;
-  margin-bottom: auto;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 991px) {
+  .text_welcome {
+    margin: -50px 20px 20px;
+    text-align: center;
+    font-size: 14px;
+    padding: 12px;
+  }
 }
 
 h2 {
   font-family: "Josefin Sans", sans-serif;
-  margin: 69px 0 69px 150px;
-  font-size: 38px;
+  font-size: 28px;
+  margin: 50px 0 20px 0;
 }
 
-p {
-  font-family: "Josefin Sans", sans-serif;
+@media (max-width: 991px) {
+  .h2 {
+    text-align: center;
+  }
 }
 
-br {
-  padding: 30px;
-}
-
-.Boutton {
-  display: flex;
-  justify-content: center;
-  margin: 210px 250px;
-  font-size: 42px;
-  border-radius: 45px;
-  background: #9f9f9f;
-  padding: 10px 30px;
-}
-footer {
-  background-image: url(../img/image-footer.png);
-  height: 25vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-iframe {
-  margin-left: 150px;
-  margin-top: 40px;
+@media (max-width: 991px) {
 }
