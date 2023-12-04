@@ -159,12 +159,12 @@ header {
 }
 
 .text_welcome {
-  margin: -150px 0 0;
+  margin: -150px 40px 0px;
   text-align: center;
   font-size: 38px;
   background: #9f9f9f;
   padding: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 220px;
 }
 
 @media (max-width: 991px) {
@@ -303,7 +303,7 @@ footer p {
 }
 
 iframe {
-  margin-top: 80px;
+  margin-top: 130px;
 }
 
 @media (max-width: 991px) {
@@ -332,5 +332,17 @@ iframe {
 @media (max-width: 991px) {
   .groupe-rouge {
     font-size: 12px;
+  }
+}
+
+.reseaux {
+  margin: 50px 270px 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .reseaux {
+    margin: 0px 110px 50px 110px;
   }
 }
