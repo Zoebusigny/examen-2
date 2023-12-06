@@ -149,11 +149,11 @@
                 );
               }
 
-              $("a.control_prev").click(function () {
+              $("#slider a.control_prev").click(function () {
                 moveLeft();
               });
 
-              $("a.control_next").click(function () {
+              $("#slider a.control_next").click(function () {
                 moveRight();
               });
             });
@@ -161,41 +161,117 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12">Article 4</div>
-      </div>
-      <div class="row">
-        <div class="col-6 offset-3 col-lg-8 offset-lg-2">
-          <a
-            id="Réservation"
-            class="Boutton"
-            href="https://fr.wiktionary.org/wiki/r%C3%A9servation"
-            >Réservation</a
-          >
+        <div class="col-12">
+          <div id="slider-2">
+            <a href="#Menu" class="control_next">
+              <p>></p>
+            </a>
+            <a href="#Menu" class="control_prev">
+              <p><</p>
+            </a>
+            <ul>
+              <li>
+                <img src="img/image3.png" />
+              </li>
+              <li>
+                <img src="img/sushis.png" />
+              </li>
+              <li>
+                <img src="img/plat japonais.png" />
+              </li>
+              <li>
+                <img src="img/Cartes boisson.png" />
+              </li>
+            </ul>
+          </div>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+          <script>
+            jQuery(document).ready(function ($) {
+              var slideCount = $("#slider-2 ul li").length;
+              var slideWidth = $("#slider-2 ul li").width();
+              var slideHeight = $("#slider-2 ul li").height();
+              var sliderUlWidth = slideCount * slideWidth;
+
+              $("#slider-2").css({ width: slideWidth, height: slideHeight });
+
+              $("#slider-2 ul").css({
+                width: sliderUlWidth,
+                marginLeft: -slideWidth,
+              });
+
+              $("#slider-2 ul li:last-child").prependTo("#slider-2 ul");
+
+              function moveLeft() {
+                $("#slider-2 ul").animate(
+                  {
+                    left: +slideWidth,
+                  },
+                  200,
+                  function () {
+                    $("#slider-2 ul li:last-child").prependTo("#slider-2 ul");
+                    $("#slider-2 ul").css("left", "");
+                  }
+                );
+              }
+
+              function moveRight() {
+                $("#slider-2 ul").animate(
+                  {
+                    left: -slideWidth,
+                  },
+                  200,
+                  function () {
+                    $("#slider-2 ul li:first-child").appendTo("#slider-2 ul");
+                    $("#slider-2 ul").css("left", "");
+                  }
+                );
+              }
+
+              $("#slider-2 a.control_prev").click(function () {
+                moveLeft();
+              });
+
+              $("#slider-2 a.control_next").click(function () {
+                moveRight();
+              });
+            });
+          </script>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-lg-4 groupe-rouge">
-          <img src="img/coeur.png" alt="coeur rouge" />
-          <p class="text-icon">
-            <strong>Personnelle</strong><br />
-            Le personnelle est à votre disposition pour toute question.
-          </p>
-        </div>
-        <div class="col-12 col-lg-4 groupe-rouge">
-          <img src="img/ble.png" alt="ble rouge" />
-          <p class="text-icon">
-            <strong>Sans Gluten</strong><br />
-            Des nouilles sans gluten sont à disposition pour les personnes
-            souffrant d'allergies au gluten.
-          </p>
-        </div>
-        <div class="col-12 col-lg-4 groupe-rouge">
-          <img src="img/plante.png" alt="plante rouge" />
-          <p class="text-icon">
-            <strong>Bio</strong><br />
-            Nos aliment sont préparé avec amour et sans produit chimique.
-          </p>
-        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 offset-3 col-lg-8 offset-lg-2">
+        <a
+          id="Réservation"
+          class="Boutton"
+          href="https://fr.wiktionary.org/wiki/r%C3%A9servation"
+          >Réservation</a
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-4 groupe-rouge">
+        <img src="img/coeur.png" alt="coeur rouge" />
+        <p class="text-icon">
+          <strong>Personnelle</strong><br />
+          Le personnelle est à votre disposition pour toute question.
+        </p>
+      </div>
+      <div class="col-12 col-lg-4 groupe-rouge">
+        <img src="img/ble.png" alt="ble rouge" />
+        <p class="text-icon">
+          <strong>Sans Gluten</strong><br />
+          Des nouilles sans gluten sont à disposition pour les personnes
+          souffrant d'allergies au gluten.
+        </p>
+      </div>
+      <div class="col-12 col-lg-4 groupe-rouge">
+        <img src="img/plante.png" alt="plante rouge" />
+        <p class="text-icon">
+          <strong>Bio</strong><br />
+          Nos aliment sont préparé avec amour et sans produit chimique.
+        </p>
       </div>
     </div>
     <footer>
@@ -203,7 +279,7 @@
         <div class="container">
           <div class="row">
             <div id="Contact" class="col-12 col-lg-6">
-              <img src="img/Logo.png" alt="Logo" />
+              <img class="logo-footer" src="img/Logo.png" alt="Logo" />
               <p>
                 078/653/16/82
                 <br />

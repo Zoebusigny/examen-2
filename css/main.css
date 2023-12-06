@@ -32,6 +32,14 @@ video {
   vertical-align: middle;
 }
 
+@media (max-width: 991px) {
+  img,
+  video {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
 .navigation {
   background-color: black;
 }
@@ -202,14 +210,16 @@ h2 {
   }
 }
 
-#slider {
+#slider,
+#slider-2 {
   position: relative;
   overflow: hidden;
   margin: 20px auto 0 auto;
   border-radius: 4px;
 }
 
-#slider ul {
+#slider ul,
+#slider-2 ul {
   position: relative;
   margin: 0;
   padding: 0;
@@ -217,7 +227,8 @@ h2 {
   list-style: none;
 }
 
-#slider ul li {
+#slider ul li,
+#slider-2 ul li {
   position: relative;
   display: block;
   float: left;
@@ -228,6 +239,13 @@ h2 {
   background: #ccc;
   text-align: center;
   line-height: 300px;
+}
+
+@media (max-width: 991px) {
+  #slider ul li,
+  #slider-2 ul li {
+    width: 100%;
+  }
 }
 
 a.control_prev,
@@ -274,45 +292,6 @@ a.control_next {
   }
 }
 
-footer {
-  background-image: url(../img/image-footer.png);
-  height: 35vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (max-width: 991px) {
-  footer {
-    font-size: 15px;
-    height: 95vw;
-  }
-}
-
-footer p {
-  font-size: 18px;
-  margin-left: 50px;
-}
-
-@media (max-width: 991px) {
-  footer p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    text-align: center;
-    margin-left: 1px;
-  }
-}
-
-iframe {
-  margin-top: 130px;
-}
-
-@media (max-width: 991px) {
-  iframe {
-    margin: 0;
-    width: 100%;
-  }
-}
-
 .text-icon {
   font-size: 24px;
   margin: 30px 0;
@@ -329,20 +308,66 @@ iframe {
   text-align: center;
   margin-top: 120px;
 }
+
 @media (max-width: 991px) {
   .groupe-rouge {
     font-size: 12px;
   }
 }
 
+footer {
+  background-image: url(../img/image-footer.png);
+  height: 35vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 991px) {
+  footer {
+    font-size: 15px;
+    height: 95vw;
+  }
+}
+
+footer p {
+  font-size: 22px;
+  margin-left: 50px;
+}
+
+@media (max-width: 991px) {
+  footer p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .logo-footer {
+    margin-left: 30px;
+  }
+}
+
 .reseaux {
-  margin: 50px 270px 0 40px;
+  margin: 40px 270px 0 50px;
   display: flex;
   justify-content: space-between;
 }
 
 @media (max-width: 991px) {
   .reseaux {
-    margin: 0px 110px 50px 110px;
+    margin: 0px 70px 50px 120px;
+  }
+}
+
+iframe {
+  margin-top: 70px;
+}
+
+@media (max-width: 991px) {
+  iframe {
+    margin: 0 1px;
+    width: 100%;
   }
 }
